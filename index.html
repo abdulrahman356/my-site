@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>خدمات بلس</title>
+
+<!-- تثبيت الخطوط + دعم عربي ثابت -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo', Tahoma, Arial, sans-serif;
+}
+
+html, body{
+width:100%;
+height:100%;
+direction:rtl;
+unicode-bidi:embed;
+background:#eef4f7;
+color:#1f2937;
+}
+
+/* منع اختلاف عرض الخط بين الأجهزة */
+body{
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
+
+/* الهيدر */
+header{
+background:linear-gradient(135deg,#0f172a,#1e3a5f);
+color:white;
+padding:40px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:38px;
+margin-bottom:10px;
+}
+
+header p{
+opacity:0.9;
+font-size:18px;
+}
+
+/* الكونتينر */
+.container{
+padding:30px 15px;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+/* الكروت */
+.card{
+background:white;
+width:320px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+/* المحتوى */
+.content{
+padding:20px;
+}
+
+.content h2{
+margin-bottom:10px;
+color:#0f172a;
+}
+
+.price{
+font-size:28px;
+color:#16a34a;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.features{
+text-align:right;
+margin-bottom:20px;
+line-height:2;
+color:#374151;
+}
+
+/* زر */
+button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+background:#16a34a;
+color:white;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#15803d;
+}
+
+/* الفوتر */
+footer{
+text-align:center;
+padding:20px;
+color:#6b7280;
+font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>خدمات بلس</h1>
+<p>اشتراكات صيانة كاميرات وحلول مراقبة احترافية</p>
+</header>
+
+<div class="container">
+
+<!-- العادية -->
+<div class="card" onclick="sendWhatsApp('اشتراك صيانة كاميرات - الباقة العادية')">
+<img src="https://images.unsplash.com/photo-1581092919535-7146ff1a5902?q=80&w=1200&auto=format&fit=crop" alt="">
+<div class="content">
+<h2>الباقة العادية</h2>
+<div class="price">149 ريال</div>
+<div class="features">
+✔️ فحص وصيانة أساسية<br>
+✔️ دعم واتساب<br>
+✔️ حل المشاكل البسيطة<br>
+✔️ متابعة شهرية
+</div>
+<button>اشترك الآن</button>
+</div>
+</div>
+
+<!-- المميزة -->
+<div class="card" onclick="sendWhatsApp('اشتراك صيانة كاميرات - الباقة المميزة')">
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200&auto=format&fit=crop" alt="">
+<div class="content">
+<h2>الباقة المميزة</h2>
+<div class="price">284 ريال</div>
+<div class="features">
+✔️ صيانة دورية احترافية<br>
+✔️ دعم سريع<br>
+✔️ ضبط إعدادات الكاميرات<br>
+✔️ متابعة مستمرة
+</div>
+<button>اشترك الآن</button>
+</div>
+</div>
+
+<!-- VIP -->
+<div class="card" onclick="sendWhatsApp('اشتراك صيانة كاميرات - باقة VIP')">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="">
+<div class="content">
+<h2>باقة VIP</h2>
+<div class="price">390 ريال</div>
+<div class="features">
+✔️ صيانة شاملة كاملة<br>
+✔️ أولوية بالدعم الفني<br>
+✔️ زيارات متابعة<br>
+✔️ حلول احترافية سريعة<br>
+✔️ خدمة VIP خاصة
+</div>
+<button>اشترك الآن</button>
+</div>
+</div>
+
+</div>
+
+<footer>
+جميع الحقوق محفوظة © خدمات بلس
+</footer>
+
+<script>
+function sendWhatsApp(packageName){
+let phone = "966559237615";
+let message = "مرحبًا، أرغب بالاشتراك في: " + packageName;
+let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+window.location.href = url;
+}
+</script>
+
+</body>
+</html>
